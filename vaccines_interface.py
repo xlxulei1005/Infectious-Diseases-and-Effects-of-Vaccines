@@ -14,6 +14,7 @@ User could enter "quit" to stop the program or by keyboard interrupt.
 '''
 from plot_heatmap import heatmap_Measles,heatmap_Hepatitis_A,heatmap_Mumps,\
                          heatmap_Poliomyelitis, heatmap_Smallpox,heatmap_Rubella
+from exception_class import *
 import sys
 
 def main():
@@ -26,11 +27,9 @@ def main():
             if data == 'quit':
                 sys.exit(0)
             if data.isdigit():
-                print('Only strings are allowed')
-                raise ValueError
+                raise DigitError
             if data not in valid_list:
-                print('This is not a existing disease in our dataset, plz re-entry a name. ')
-                raise ValueError
+                raise InvalidDisease
             
             if data == 'measles':
                 heatmap_Measles()
@@ -50,8 +49,10 @@ def main():
             sys.exit(0)
         except ValueError:
             print('Invalid input!')
-      
-            
+        except DigitError:
+            print('Only string disease name are valid for Heatmap!')
+        except InvalidDisease:
+            print('This is not a existing disease in our dataset, plz re-entry a name. ')  
 
 if __name__ == '__main__':
     print('-Enter the disease name to see the heatmap of disease and vaccines')
