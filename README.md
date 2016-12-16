@@ -25,9 +25,13 @@ $ conda install basemap
 ```
 
 Note on installing Seaborn: 
-Basemap can be installed easily in command line by simply executing
+Seaborn can be installed easily in command line by simply executing
 ```
 $ conda install seaborn
+```
+It's also possible to install the latest released version of seaborn by using pip
+```
+$ pip install seaborn
 ```
 
 ### Using html5 to visualize the results produced by this program
