@@ -20,7 +20,7 @@ import sys
 def main():
     while True:
         try:
-            data = input('Plz enter the name of disease: ').lower()
+            data = input('Please enter the name of disease: ').lower()
             data = data.replace(" ", "") #eliminating any space by mistakenly input
             valid_list =['measles','hepatitis_a','rubella','poliomyelitis','smallpox','mumps']
             
@@ -55,8 +55,8 @@ def main():
             print('This is not a existing disease in our dataset, plz re-entry a name. ')  
 
 if __name__ == '__main__':
-    print('-Enter the disease name to see the heatmap of disease and vaccines')
-    print('-Availible diseases are Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps')
-    print('-You can type Quit to interrupt program')
+    print('-Enter the disease name to see the heatmap of disease and vaccines.')
+    print('-Availible diseases are Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps.')
+    print("-You can type 'Quit' to interrupt program.")
     
     main()

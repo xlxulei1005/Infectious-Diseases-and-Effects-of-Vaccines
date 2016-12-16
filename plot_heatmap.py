@@ -17,6 +17,8 @@ import numpy as np
 import seaborn as sns; sns.set()
 from matplotlib.colors import ListedColormap
 import matplotlib.pylab as pylab
+import warnings
+warnings.filterwarnings('ignore')
 
 plt.style.use('fivethirtyeight')
 
@@ -43,6 +45,7 @@ def heatmap_Measles():
     ax.axvline(x=36,color='k',linewidth=2.5) 
     ax.text(36,0.1,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Measles.pdf')
     
 def heatmap_Hepatitis_A():
@@ -69,6 +72,7 @@ def heatmap_Hepatitis_A():
     ax.axvline(x=29,color='k',linewidth=2.5) 
     ax.text(29,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Hepatitis_A.pdf')
     
 def heatmap_Mumps():
@@ -93,6 +97,7 @@ def heatmap_Mumps():
     ax.axvline(x=0.2,color='k',linewidth=3)  
     ax.text(0.3,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Mumps.pdf')
     
 def heatmap_Rubella():
@@ -119,6 +124,7 @@ def heatmap_Rubella():
     ax.axvline(x=4,color='k',linewidth=3)  
     ax.text(4,0.3,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Rubella.pdf')
     
 def heatmap_Poliomyelitis():
@@ -145,6 +151,7 @@ def heatmap_Poliomyelitis():
     ax.axvline(x=29,color='k',linewidth=3)  
     ax.text(29,2.3,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Poliomyelitis.pdf')
 
 def heatmap_Smallpox():
@@ -172,4 +179,5 @@ def heatmap_Smallpox():
             verticalalignment='bottom', horizontalalignment='right',
             transform=ax.transAxes, color='#2c3e50', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
+    fig.tight_layout()
     fig.savefig('Heatmap of Smallpox.pdf')
