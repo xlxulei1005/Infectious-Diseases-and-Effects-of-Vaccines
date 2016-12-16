@@ -23,11 +23,11 @@ def main():
     while True:
         try:
             plot_type = input('Please choose one of the following kind of plot:\n Heatmap or Geo-heatmap\n')
-            if plot_type.upper() not in ['HEATMAP', 'GEO-HEATMAP']:
-                raise plottypeException()
-            elif plot_type.upper() == 'EXIT':
+            if plot_type.upper() == 'EXIT':
                 print('EXIT!')
                 sys.exit(0)
+            elif plot_type.upper() not in ['HEATMAP', 'GEO-HEATMAP']:
+                raise plottypeException()
             elif plot_type.upper() == 'HEATMAP':
                 while True:
                     try:
