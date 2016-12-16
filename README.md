@@ -21,7 +21,13 @@ Requires Python 3, and the following packages to function successfully:
 Note on installing Basemap: 
 Basemap can be installed easily in command line by simply executing
 ```
-$ conda install Basemap
+$ conda install basemap
+```
+
+Note on installing Seaborn: 
+Basemap can be installed easily in command line by simply executing
+```
+$ conda install seaborn
 ```
 
 ### Using html5 to visualize the results produced by this program
