@@ -14,6 +14,11 @@ Smallpox_vaccine_year = 1796
 Poliomyelitis_vaccine_year = 1955
 
 def get_mean(disease):
+    '''
+    Return the mean number of infected people before and after the year of vaccine invented,
+    Note: in some cases the mean number before vaccine invented is NaN since our dataset doesn't 
+    have recorded data back to that time.
+    '''
     
     df = heatmap_disease_matrix(disease) 
     df['sum_all_state'] = df.sum(axis=1)
@@ -38,4 +43,19 @@ def get_mean(disease):
         mean_before_vc = np.mean(df.loc[:Mumps_vaccine_year])
         mean_after_vc  = np.mean(df.loc[Mumps_vaccine_year:])
     
-    return [mean_before_vc,mean_after_vc]
+    return [mean_before_vc['sum_all_state'],mean_after_vc['sum_all_state']]
+
+
+def display_mean(mean_before, mean_after):
+    '''display the mean number in the user-interface'''
+    
+    if mean_before > 0:
+        print("Mean number of infected people before vaccine invented is: ",mean_before)
+        print("Mean number of infected people after vaccine invented is: ",mean_after)
+        print('\t')
+        
+    else:
+        print("Mean number before vaccine invented is not available since our dataset doesn't have recorded data back to that time.")
+        print("Mean number of infected people after vaccine invented is: ",mean_after)
+        print('\t')
+         

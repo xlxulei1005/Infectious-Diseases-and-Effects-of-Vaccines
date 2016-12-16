@@ -69,8 +69,8 @@ def heatmap_Hepatitis_A():
                      xticklabels = 5 )
 
     ax.set_title('Hepatitis A',fontsize=18, fontweight='bold') 
-    ax.axvline(x=29,color='k',linewidth=2.5) 
-    ax.text(29,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
+    ax.axvline(x=22,color='k',linewidth=2.5) 
+    ax.text(22,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
     fig.tight_layout()
     fig.savefig('Heatmap of Hepatitis_A.pdf')
@@ -94,8 +94,8 @@ def heatmap_Mumps():
                      xticklabels = 5 )
 
     ax.set_title('Mumps',fontsize=18, fontweight='bold') 
-    ax.axvline(x=0.2,color='k',linewidth=3)  
-    ax.text(0.3,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
+    ax.axvline(x=10,color='k',linewidth=3)  
+    ax.text(10.3,0.5,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
     fig.tight_layout()
     fig.savefig('Heatmap of Mumps.pdf')
@@ -175,9 +175,8 @@ def heatmap_Smallpox():
                      xticklabels = 2 )
 
     ax.set_title('Smallpox',fontsize=18, fontweight='bold') 
-    ax.text(1.0, 0.0, 'Note: The vaccine for smallpox was introduced in 1800.',
-            verticalalignment='bottom', horizontalalignment='right',
-            transform=ax.transAxes, color='#2c3e50', fontsize=10,fontweight='bold')
+    ax.axvline(x=12,color='k',linewidth=3)  
+    ax.text(12,0.3,' Vaccine introduced', fontsize=10,fontweight='bold')
     plt.yticks(rotation ='horizontal')
     fig.tight_layout()
     fig.savefig('Heatmap of Smallpox.pdf')

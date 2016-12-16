@@ -15,6 +15,7 @@ User could enter "quit" to stop the program or by keyboard interrupt.
 from plot_heatmap import heatmap_Measles,heatmap_Hepatitis_A,heatmap_Mumps,\
                          heatmap_Poliomyelitis, heatmap_Smallpox,heatmap_Rubella
 from exception_class import *
+from statistics import get_mean, display_mean
 import sys
 
 def main():
@@ -32,16 +33,34 @@ def main():
                 raise InvalidDisease
             
             if data == 'measles':
+                mean_before =  get_mean('measles')[0]
+                mean_after  =  get_mean('measles')[1]
+                display_mean(mean_before, mean_after)
                 heatmap_Measles()
+                
             if data == 'hepatitis_a':
+                mean_before, mean_after = get_mean('hepatitis a')
+                display_mean(mean_before, mean_after)
                 heatmap_Hepatitis_A()
+                
             if data == 'rubella':
+                mean_before, mean_after = get_mean('rubella')
+                display_mean(mean_before, mean_after)
                 heatmap_Rubella()
+                
             if data == 'poliomyelitis':
+                mean_before, mean_after = get_mean('poliomyelitis')
+                display_mean(mean_before, mean_after)
                 heatmap_Poliomyelitis()
+                
             if data == 'smallpox':
+                mean_before, mean_after = get_mean('smallpox')
+                display_mean(mean_before, mean_after)
                 heatmap_Smallpox()
+                
             if data == 'mumps':
+                mean_before, mean_after = get_mean('mumps')
+                display_mean(mean_before, mean_after)
                 heatmap_Mumps()
             
         except KeyboardInterrupt:
