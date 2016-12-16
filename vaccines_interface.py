@@ -31,8 +31,8 @@ def main():
             elif plot_type.upper() == 'HEATMAP':
                 while True:
                     try:
-                        data = input('Please enter the name of disease: ').lower()
                         print('-Availible diseases are Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps.')
+                        data = input('Please enter the name of disease: ').lower()
                         data = data.replace(" ", "")  # eliminating any space by mistakenly input
                         valid_list = ['measles', 'hepatitis_a', 'rubella', 'poliomyelitis', 'smallpox', 'mumps']
                         
@@ -110,6 +110,7 @@ def main():
                             break  
                         if user_disease.lower() == 'help':
                             print(disease_list)
+                            user_disease = input('Please enter the disease you want to see,for example: MUMPS,MEASLES or input \'help\' to see full list of available diseases\n').upper()
                         user_disease = disease_class(user_disease)
                         print(user_disease)
                         user_year = input('Please enter the year\n')
