@@ -89,7 +89,7 @@ Please enter the year
 
 > 1970
 ```
-In geo heatmap mode, the user is prompted to enter a disease, a color, and a year. For the program to run successfully, please make sure you enter: 1. a valid disease name from the provided list, which you can obtain by inputting 'help' in the command line to see a full list of available diseases; 2. a valid floating number between 0 to 1 (corresponding to 0-360&deg HSV cylindrical-coordinate representations of points in an RGB color model.) that represents the color you wish the map to have; 3. a valid year from the range provided by the program.
+In geo heatmap mode, the user is prompted to enter a disease, a color, and a year. For the program to run successfully, please make sure you enter: 1. a valid disease name from the provided list, which you can obtain by inputting 'help' in the command line to see a full list of available diseases; 2. a valid floating number between 0 to 1 (corresponding to 0-360 &deg HSV cylindrical-coordinate representations of points in an RGB color model.) that represents the color you wish the map to have; 3. a valid year from the range provided by the program.
 The program should then produce and save a pdf file that contains a geo-heatmap of the corresponding disease, color and year. Note that this process might take up to 15 seconds.
 
 Unittest is also supported in this program. Simply call in command line:
