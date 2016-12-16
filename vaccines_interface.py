@@ -2,15 +2,21 @@
 '''
 Main class for the program. 
 
-User prompts option of diseases (Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps) to see
-the trend of decreasing number of infective people over time and its relation to the invention of 
-vaccines.
+It provides two types of plots and related statistics for diferent diseases:
 
-Heatmap will plot the number of infected people, measured over 70-somes years and across all states. 
+Plot heatmap:
+User prompts six options of diseases (Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps)
+to see the trend of decreasing number of infective people over time and its relation to the invention 
+of vaccines.Generally the plot will show a distinctive declined density after vaccines were introduced.
 
-Generally the plot will show a distinctive declined density after vaccines were introduced.
+Plot geo-heatmap:
+show the geological distribution of certain disease over different states in a certain year. 
+User can choose over fifty diseases and certain year which is in the range of relative disease 
+with their preferred color. By entering 'help', the list of diseases can be shown. 
+Generally, if you try different years for a fixed disease, the distribution will change over time.
 
-User could enter "exit" to stop the program or by keyboard interrupt.
+User could enter 'quit' to switch the mode of p'exit' to stop the program or by keyboard interrupt.
+
 '''
 from plot_heatmap import heatmap_Measles, heatmap_Hepatitis_A, heatmap_Mumps, \
                          heatmap_Poliomyelitis, heatmap_Smallpox, heatmap_Rubella
