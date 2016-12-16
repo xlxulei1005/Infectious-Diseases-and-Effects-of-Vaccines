@@ -15,7 +15,8 @@ User can choose over fifty diseases and certain year which is in the range of re
 with their preferred color. By entering 'help', the list of diseases can be shown. 
 Generally, if you try different years for a fixed disease, the distribution will change over time.
 
-User could enter 'quit' to switch the mode of p'exit' to stop the program or by keyboard interrupt.
+User could enter 'quit' to switch the mode of plot 
+       or  enter 'exit' to stop the program or by keyboard interrupt.
 
 '''
 from plot_heatmap import heatmap_Measles, heatmap_Hepatitis_A, heatmap_Mumps, \
@@ -37,7 +38,7 @@ def main():
             elif plot_type.upper() == 'HEATMAP':
                 while True:
                     try:
-                        print('-Availible diseases are Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps.')
+                        print('-Available diseases are Measles, Hepatitis_A, Rubella, Poliomyelitis, Smallpox and Mumps.')
                         data = input('Please enter the name of disease: ').lower()
                         data = data.replace(" ", "")  # eliminating any space by mistakenly input
                         valid_list = ['measles', 'hepatitis_a', 'rubella', 'poliomyelitis', 'smallpox', 'mumps']
